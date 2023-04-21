@@ -3,26 +3,26 @@ import s from './Img.module.css';
 
 
 export default function Img() {
-    const [fruitItems, setFruitItems] = useState([<img src="/logodolfin.png" alt="dolfin" />, <img src="/logofish.png" alt="fish" />, <img src="/logooctopus.png" alt="octopus" />]);
+    const [animalItems, setAnimalItems] = useState([<img src="/logodolfin.png" alt="dolfin" />, <img src="/logofish.png" alt="fish" />, <img src="/logooctopus.png" alt="octopus" />]);
     const dragItem = useRef(null);
     const dragOverItem = useRef(null);//useRef похож на «коробку», которая может содержать изменяемое значение в своём свойстве .current.
 
     //функция сортировки
     const handleSort = () => {
-        let _fruitItems = [...fruitItems] //дубликат items
+        let _animalItems = [...animalItems] //дубликат items
 
         //удаление и сохранение содержимого
-        const draggedItemContent = _fruitItems.splice(dragItem.current, 1)[0];
+        const draggedItemContent = _animalItems.splice(dragItem.current, 1)[0];
 
         //переключение
-        _fruitItems.splice(dragOverItem.current, 0, draggedItemContent);
+        _animalItems.splice(dragOverItem.current, 0, draggedItemContent);
 
         //сброс
         dragItem.current = null;
         dragOverItem.current = null;
 
         //обновление
-        setFruitItems(_fruitItems);
+        setAnimalItems(_animalItems);
     }
 
     /*const onDragStart = (e, index) => {
@@ -39,7 +39,7 @@ export default function Img() {
             <h2 className={s.h2}>Animal List</h2>
           
         <ul className={s.list__container}>
-            {fruitItems.map((item, index) => (
+            {animalItems.map((item, index) => (
                 <li
                     key={index}
                     className={s.list__item}
