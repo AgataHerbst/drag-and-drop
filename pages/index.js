@@ -1,9 +1,10 @@
 import DragCard from '../components/DragCard';
-import ToDo from '../components/ToDo';
+import Img from '../components/Img';
+import ToDoList from '../components/ToDoList';
 
 export default function HomePage(){
 return <>
-<ToDo />
-<DragCard />
+<Img />
+<ToDoList />
 </>
 }

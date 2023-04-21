@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import s from './ToDo.module.css';
+import s from './Img.module.css';
 
 
-export default function ToDo() {
+export default function Img() {
     const [fruitItems, setFruitItems] = useState([<img src="/logodolfin.png" alt="dolfin" />, <img src="/logofish.png" alt="fish" />, <img src="/logooctopus.png" alt="octopus" />]);
     const dragItem = useRef(null);
     const dragOverItem = useRef(null);//useRef похож на «коробку», которая может содержать изменяемое значение в своём свойстве .current.
