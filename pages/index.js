@@ -1,10 +1,9 @@
 import DragCard from '../components/DragCard';
-import DragZone from '../components/DragZone';
+import ToDo from '../components/ToDo';
 
 export default function HomePage(){
 return <>
-
+<ToDo />
 <DragCard />
-<DragZone />
 </>
 }

@@ -1,4 +1,7 @@
 .drag{
+    font-size: 30px;
+    font-weight: bold;
+    color: #808000;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,7 +13,7 @@
     width: 200px;
     height: 200px;
     border-radius: 12px;
-    border: 2px solid black;
+    border: 2px solid #006400;
     display: flex;
     justify-content: center;
     align-items: center;
